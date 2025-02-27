@@ -12,7 +12,7 @@ from tqdm.auto import tqdm
 
 # ========== 系统配置 ==========
 PUSH_TOKEN = 'f084c45f55ca4d658565498255db384b'  # 需替换为实际值（若无需推送可留空）
-MIN_MV = 80  # 最小市值（亿）30
+MIN_MV = 20  # 最小市值（亿）30
 MAX_MV = 500  # 最大市值（亿）500
 PE_THRESHOLD = 50  # 市盈率警戒值
 PB_THRESHOLD = 5  # 市净率警戒值
@@ -513,7 +513,7 @@ def main_controller(code=None):
         report = f"""
 📈 缠论选股报告（{datetime.now().strftime('%Y-%m-%d %H:%M')}）
 ============================================
-{df.head(10).to_markdown(index=False)}
+{df.head(5).to_markdown(index=False)}
 
 ► 30分钟缠论买卖点：
 {df[['代码', '名称', '30分钟缠论']].head(10).to_markdown(index=False)}
