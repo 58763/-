@@ -28,4 +28,4 @@ jobs:
       env:
         PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
       run: |
-        python 最终进阶版.py
+        python 2.py
